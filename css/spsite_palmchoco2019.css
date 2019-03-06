@@ -1,0 +1,584 @@
+﻿@charset "utf-8";
+/*common*/
+html,body{
+	font-size:1em;
+	line-height:1.4;
+	font-family:"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","HG明朝B","MS Mincho",serif;
+	}
+body{
+	background-color:#fff;
+	height:auto;
+	overflow:auto;
+	box-sizing:border-box;
+	counter-reset:num_headline;
+	}
+div{
+	box-sizing:border-box;
+	}
+img{
+	display: block;
+    width: 100%;
+	}
+span.sup{
+	font-size: 0.5em;
+    vertical-align: super;
+	}
+/*common end*/
+/*header and footer start*/
+header,footer{
+    padding: 5px 15px;
+    margin: auto;
+	background-color: #2f333f;
+	}
+header ul,footer ul{
+	list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+	align-items:center;
+    max-width:100%;
+    width: 100%;
+    margin: 0 auto;
+	}
+header li[class^="side_"]{}
+header ul a,
+footer ul a{
+	display: block;
+	}
+header ul .logo_ecap{
+	max-width:220px;
+	width:100%;	
+	}
+footer ul .logo_capcom{
+	max-width:110px;
+	width:100%;
+	}
+header .logo_ecap_yahoo{
+    max-width: 300px;
+    width: 100%;
+}
+header .logo_ecap_rakuten{
+	max-width:200px;
+	width:100%;
+	}
+header ul .btn_twshare{
+	max-width:50px;
+    width:100%;
+	min-width:32px;
+    height:auto;
+	}
+footer{
+	color:#fff;
+	}
+footer .copyright{
+	text-align: right;
+	font-size: 0.5rem;
+	}
+/*header and footer end*/
+/*main start*/
+.bg_top_visual{
+	width: 100%;
+	}
+.top_visual{
+	width:100%;
+	}
+.top_visual_pc{
+	max-width:980px;
+	width:100%;
+	margin:auto;
+	}
+.top_visual_sp{
+	display:none;
+	}
+@media screen and (max-width:426px){
+	.top_visual_pc{
+		display:none;
+		}
+	.top_visual_sp{
+		display:block;
+		}
+	}.about_valentineplan{
+	padding: 1rem;
+    margin: auto;
+    text-align: center;
+    max-width: 50em;
+    width: 100%;
+    box-sizing: border-box;
+	}
+.area_select{
+	background-color: #e1d4b9;
+	}
+.select_character{
+	list-style: none;
+    padding: 4rem 1rem;
+	}
+.select_character .to_chiaki{
+	max-width: 40em;
+    width: 100%;
+    margin: auto;
+	}
+.select_character .to_chiaki .name{
+	font-size: 2.0rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+	color:#2c1203;
+	}
+.select_character .to_chiaki .name::before,
+.select_character .to_chiaki .name::after{
+	content: "";
+    display:block;
+    max-width: 70px;
+    width: 100%;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+	}
+.select_character .to_chiaki .name::before{
+	background-image:url(../img/deco_floral_left.png);
+	}
+.select_character .to_chiaki .name::after{
+	background-image:url(../img/deco_floral_right.png);
+	}
+.select_character .to_chiaki figure{
+	overflow:hidden;
+	border: 1px solid #2c1203;
+	box-sizing: border-box;
+	}
+.select_character .to_chiaki figure img{
+	transition: all 0.6s;
+	}
+.select_character .to_chiaki dl{
+	border: 1px solid #4a220b;
+    padding: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+	}
+.select_character .to_chiaki dd{
+	margin: 4px 0 0 0;
+	}
+.btn_tochiaki{
+    text-decoration: none;
+    border-image: url(../img/border_btn.png) 10;
+    border-style: solid;
+    border-width: 10px;
+    border-image-repeat: repeat;
+    display: block;
+    text-align: center;
+    background-image: url(../img/bg_btn_higanbana.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #4a220b;
+	color:#cda236;
+	transition:color,background-color,border-image 0.3s;
+	}
+.btn_tochiaki span:nth-of-type(1){font-size: 2rem;}
+.btn_tochiaki span:nth-of-type(2){font-size: 1.2rem;}
+.btn_tochiaki img{
+    max-width: 300px;
+    margin: auto;
+	}
+.btn_tochiaki:hover{
+	background-color:#ffdd88;
+	color:#4a220b;
+    border-image: url(../img/border_btn_hover.png) 10;
+	}
+.about_term{
+    max-width: 40em;
+    width: 100%;
+    margin: auto;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+	border-bottom: 4px solid black;
+	}
+.about_term dt{
+	font-size: 1.875rem;
+	text-align:center;
+	}
+.about_term dd:nth-of-type(1){
+	font-size: 1.25rem;
+	text-align:center;
+	}
+.about_term .note{
+	text-indent: -1em;
+    padding: 1em;
+    font-size: 1rem;
+    color:#cc0000;
+	}
+.before_purchase{
+	max-width:40em;
+    width:100%;
+    margin:auto;
+    padding:2rem 1rem;
+	box-sizing:border-box;
+	font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",sans-serif;
+	}
+.before_purchase ul{
+	list-style: none;
+	color:#2c1203;
+	}
+.before_purchase ul li{
+	text-indent: -1em;
+    padding: 0 0 0 1em;	
+	font-size: 0.75rem;
+	}
+.before_purchase ul li:before{
+	content:"※";
+	}
+.before_purchase ul li:nth-of-type(-n+3){
+	color:#cc0000;
+	}
+@media screen and (max-width:426px){
+	.about_term dd span{
+		display:block;
+		}
+	}
+/*main end*/
+/*p2 start*/
+.breadcrumb{
+    max-width: 980px;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 2rem;
+    border-top: 4px solid #d9b44c;
+    border-bottom: 1px solid #d9b44c;
+    box-sizing: border-box;
+	}
+.breadcrumb ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+	font-size: 0.75rem;
+	}
+.breadcrumb ul li{
+	margin: 0.5rem 0;
+	}
+.breadcrumb ul li:after{
+	content:"＞";
+	padding:0 5px;
+	}
+.breadcrumb ul li:last-child:after{
+	content:"";
+	}
+.breadcrumb ul a{
+	text-decoration: none;
+	color:#000;
+	padding: 0.5rem;
+	transition:background-color 0.3s;
+	}
+.breadcrumb ul a:hover{
+	background-color:#fff1cc;
+	}
+.about_present{
+	max-width: 40em;
+	width:100%;
+    margin: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+	text-indent: 1em;
+	}
+.okaeshi_chiaki{
+	border-top: 5px solid #d9b449;
+    border-bottom: 5px solid #d9b449;
+	max-width: 980px;
+    width: 100%;
+    margin: auto;
+	}
+.about_okaeshi{
+	max-width: 40em;
+    width: 100%;
+    margin: auto;
+	padding:2rem 0;
+	}
+.about_okaeshi dt img:nth-of-type(1){
+	max-width: 70px;
+    margin: auto;
+	}
+.about_okaeshi dt img:nth-of-type(2){
+	max-width: 300px;
+    margin: auto;	
+	}
+.about_okaeshi .illust_okaeshi{
+	max-width:30em;
+	width:100%;
+	margin:auto;
+	}
+.about_okaeshi .illust_okaeshi:before{
+    content: "箱(梱包)";
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    max-width: 5em;
+    background-color: #dce0dd;
+    text-align: center;
+	}
+.about_okaeshi .price{
+	text-align:center;
+	color:#4e6457;
+	font-size: 1.5rem;
+	}
+.about_okaeshi .price:before,
+.about_okaeshi .price:after{
+	font-size: 0.75em;
+	}
+.about_okaeshi .price:before{
+	content:"価格：";
+	}
+.about_okaeshi .price:after{
+	content:"円＋税";
+	}
+.btn_reserve_chiaki{
+	display: block;
+    max-width: 20em;
+    width: 100%;
+	margin: 2rem auto 0;
+    padding: 2rem 0;
+    text-decoration: none;
+    color: #4e6457;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid;
+    box-sizing: border-box;
+	transition:background-color 0.3s;
+	}
+.btn_reserve_chiaki:hover{
+    background-color: #f6d703;
+	}
+.btn_reserve_chiaki img{
+	max-width: 80px;
+    margin:1rem auto 0;
+	transition:transform 0.3s;
+	}
+.btn_reserve_chiaki:hover img{
+	transform:translateX(20px);
+	}
+.about_okaeshi .note{
+    max-width: 20em;
+    width: 100%;
+    margin: auto;
+    text-indent: -1em;
+    padding: 0 0 0 1em;
+	}
+.warning{
+    max-width: 40em;
+    width: 100%;
+    margin: auto;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+	}
+.link_warning{
+	display: block;
+    max-width: 40em;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #abd0be;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+	transition:all 0.4s;
+	}
+.link_warning:hover{
+    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.4);
+	background-color: #d9b44a;
+	}
+.link_warning span:nth-of-type(1){
+	font-size: 1.5rem;
+    color: #4e6457;
+	}
+.link_warning span:nth-of-type(2){
+    display: block;
+    max-width: 30em;
+    width: 100%;
+    margin:0.5rem auto;
+    padding: 1rem;
+    color: red;
+    background-color: #fff;
+    border: 1px solid #4e6457;
+    box-sizing: border-box;
+	transition:all 0.6s;
+	}
+.link_warning:hover span:nth-of-type(2){
+    color:#fff;
+    background-color:red;	
+    border:1px solid #fff;
+	}
+.link_warning img{
+	max-width: 80px;
+    margin: 1rem auto 0.5rem;
+	transform:perspective(50px) translate3d(0px,0px,-10px);
+	transition:all 0.3s;
+	}
+.link_warning:hover img{
+	transform:perspective(50px) translate3d(20px,0px,0px);
+	}
+hr{
+	max-width:980px;
+    width: 100%;
+    height: 1px;
+    margin: 2rem auto;
+    background-color: #d9b44a;
+	}
+/*p2 end*/
+/*warning start*/
+.area_warning{
+    background-color: #2f333f;
+	max-width: 980px;
+    width: 100%;
+	margin: auto;
+	}
+.warning_list{
+	list-style: none;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+	}
+.warning_list_box{
+    max-width: 50em;
+    width: 100%;
+    border: #f0f9f8 solid 3px;
+    border-radius: 100px;
+    margin:1rem auto;
+    padding: 2rem 4rem;
+    color: #fff;
+    background-color: #181b23;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+	}
+.warning_list_box figure{
+    max-width: 70px;
+    width: 100%;
+	padding: 1rem;
+	}
+.warning_list_box p{
+}
+.warning_list_box .about_sns{
+	color:#ffbd00;
+	max-width:40em;
+	width:100%;
+	}
+.confirm{
+	padding: 0 0 4rem 0;
+	}
+.confirm dt{
+	color:#fff;
+	font-size: 1.5rem;
+	}
+.confirm dt:before{
+	content:"";
+	display:block;
+	max-width:400px;
+	width:100%;
+	height:2px;
+	background-image:linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	}
+.confirm dt div{
+	margin: 0rem 0 0 1rem;
+	padding: 1rem 0;
+	}
+.confirm .go_or_back{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 50em;
+    width: 100%;
+    margin: auto;
+	}
+.confirm .go_or_back a{
+    display: block;
+    max-width: 15em;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #2f333f;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #181b23;
+    box-sizing: border-box;
+	margin: 1rem;
+	transition:all 0.3s;
+	}
+.confirm .go_or_back .go{
+	background-color: #f6d703;
+	}
+.confirm .go_or_back .back{
+	background-color: #4fb6a5;
+	}
+.go_or_back .go img{
+    max-width: 70px;
+    margin: auto;
+    padding: 1rem 0 0 0;
+	transition:transform 0.3s;
+	}
+.go_or_back .back img{
+    max-width: 50px;
+    margin: auto;	
+	transition:transform 0.3s;
+	}
+.confirm .go_or_back .go:hover{
+	background-color: #fff;
+	}
+.confirm .go_or_back .go:hover img{
+	transform: translateX(20px);
+	}
+.confirm .go_or_back .back:hover{
+	background-color: #999999;
+	}
+.confirm .go_or_back .back:hover img{
+	transform: translateX(-20px);
+	}
+@media screen and (max-width:426px){
+	.breadcrumb ul{
+		flex-wrap: wrap;
+		}
+	.warning_list_box{
+	    padding: 1rem;
+		border-radius: 0;
+		border: 1px solid #f0f9f8;
+		flex-wrap: wrap;
+		justify-content: center;
+		}
+	}
+/*warning end*/
+/*gift_more start*/
+.area_detail{}
+.sizeImage{
+	padding:0.5rem 0;
+	}
+
+.btn_chiaki_detail{
+	display: block;
+    margin: 2rem auto;
+    max-width: 30em;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #2a2e39;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #abd0be;
+	transition:background-color 0.3s;
+	}
+.btn_chiaki_detail:hover{
+	background-color: #f6d703;
+	}
+.btn_chiaki_detail div{
+	font-size:1.2rem;
+	margin:0.5rem 0;
+	}
+/*gift_more end*/
